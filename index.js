@@ -6,13 +6,13 @@ const input = document.createElement('input')
 const buttonAdd = document.createElement('button')
 const myList = document.createElement('ul')
 const items = document.createElement('li')
-const clearBtn = document.createElement('button')
-const btnClose = document.createElement('button')
+const buttonClear = document.createElement('button')
+const buttonClose = document.createElement('button')
 
-btnClose.classList.add('close')
+buttonClose.classList.add('close')
 
 
-clearBtn.textContent = 'clear'
+buttonClear.textContent = 'clear'
 
 input.setAttribute('placeholder', 'title') 
 
@@ -21,14 +21,14 @@ input.classList.add('input')
 buttonAdd.classList.add('add')
 myList.classList.add('my-list')
 items.classList.add('item')
-clearBtn.classList.add('clear')
+buttonClear.classList.add('clear')
 
 buttonAdd.textContent = 'add'
 wrapper.append(myDiv)
 myDiv.append(input)
 myDiv.append(buttonAdd)
 wrapper.append(myList)
-wrapper.append(clearBtn)
+wrapper.append(buttonClear)
 
 buttonAdd.addEventListener('click', () => {
 	if (input.value === '') {
@@ -37,22 +37,25 @@ buttonAdd.addEventListener('click', () => {
 		const items = document.createElement('li')
 		items.classList.add('list-item')
 		myList.append(items)
-		const btnClose = document.createElement('button')
-		btnClose.classList.add('close')
-		btnClose.textContent = 'x'
-		myList.append(btnClose)
+		const buttonClose = document.createElement('button')
+		buttonClose.classList.add('close')
+		buttonClose.textContent = 'x'
+		myList.append(buttonClose)
 		items.textContent = input.value
 		input.value = ''
+		buttonClose.addEventListener('click', (e) => {
+			items.textContent = ''
+		})
+		buttonClose.addEventListener('click', () => {
+			buttonClose.textContent = ''
+			items.style.cssText = 'border-bottom: none'
+			
+		})
 	}
+
 })
 
-clearBtn.addEventListener('click', () => {
+buttonClear.addEventListener('click', () => {
 	myList.textContent = ''
 })
-console.log(btnClose);
-
-btnClose.addEventListener('click', () => {
-	btnClose.style.cssText = 'color: black'
-})
-
 

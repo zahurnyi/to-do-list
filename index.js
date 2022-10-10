@@ -32,7 +32,7 @@ wrapper.append(clearBtn)
 
 buttonAdd.addEventListener('click', () => {
 	if (input.value === '') {
-		alert('write text..')
+		alert('write text...')
 	} else {
 		const items = document.createElement('li')
 		items.classList.add('list-item')

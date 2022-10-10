@@ -48,7 +48,8 @@ buttonAdd.addEventListener('click', () => {
 		})
 		buttonClose.addEventListener('click', () => {
 			buttonClose.textContent = ''
-			items.style.cssText = 'border-bottom: none'
+			// myList.textContent = ''
+			items.style.cssText = 'display: none'
 			
 		})
 	}

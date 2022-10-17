@@ -76,145 +76,148 @@ h6 {
 /* ---------------------------------- */
 body {
   background: rgb(163, 79, 79);
-	/* padding: 50px 0px; */
-	text-align: center;
-	font-family: roboto;
+  /* padding: 50px 0px; */
+  text-align: center;
+  font-family: roboto;
 }
 
 .wrapper {
-	background-color: #00f3ff8c;
-	width: 800px;
-	margin: 0 auto;
-	position: absolute;
-	top: 50%;	
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border-radius: 10px;
-	padding: 25px 15px;
+  background-color: #00f3ff8c;
+  width: 800px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 25px 15px;
 }
 
-.list{
-	width: 100%;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	gap: 5px;
+.list {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
-.input{
-	position: relative;
-	color: black;
-	height: 70px;
-	width: 400px;
-	padding: 10px;
-	margin: 0 0 10px 0;
-	font-size: 30px;
-	border-radius: 12px;
+.input,
+.popap__input {
+  position: relative;
+  color: black;
+  height: 70px;
+  width: 400px;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  font-size: 30px;
+  border-radius: 12px;
 }
 
 .add {
-	display: inline-block;
-	height: 70px;
-	padding: 10px 40px;
-	font-size: 25px;
-	border-radius: 12px;
+  display: inline-block;
+  height: 70px;
+  padding: 10px 40px;
+  font-size: 25px;
+  border-radius: 12px;
 }
 
 .list-item {
-	font-size: 40px;
-	border-bottom: 1px solid #000;
-	margin: 0 0 15px 0;
+  font-size: 40px;
+  border-bottom: 1px solid #000;
+  margin: 0 0 15px 0;
 }
-
 
 .clear {
-	font-size: 25px;
-	display: inline-block;
-	padding: 20px 45px;
-	border-radius: 12px;
-
+  font-size: 25px;
+  display: inline-block;
+  padding: 20px 45px;
+  border-radius: 12px;
 }
 
 .list-item {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .close {
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	/* background: url(/img/delete.svg) no-repeat; */
-	width: 30px;
-	height: 100%;
-
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* background: url(/img/delete.svg) no-repeat; */
+  width: 30px;
+  height: 100%;
 }
 
-.done{
-	background: none;
-	position: absolute;
-	top: 0;
-	right: 5%;
-	width: 30px;
-	height: 100%;
-	color: black;
+.done {
+  background: none;
+  position: absolute;
+  top: 0;
+  right: 5%;
+  width: 30px;
+  height: 100%;
+  color: black;
 }
 
 .edit {
-	display: inline-block;
-	position: absolute; 
-	top: 0;
-	left: 0; 
-	padding: 6px 25px;
-	border-radius: 12px;
-	background-color: wheat;
-	font-size: 20px;
-	font-weight: 700;
-
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6px 25px;
+  border-radius: 12px;
+  background-color: wheat;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 /* ----------------- */
 
 .popap {
-	background-color: rgba(0, 0, 0, 0.432);
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	visibility: hidden;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  background-color: rgba(0, 0, 0, 0.432);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  visibility: hidden;
 }
 .popap__body {
-	background-color: #fff;	
-	min-height: 400px;	
-	width: 550px;
-	position: relative;
-	border-radius: 15px;
+  background-color: #fff;
+  min-height: 400px;
+  width: 550px;
+  position: relative;
+  border-radius: 15px;
 }
 .popap__content {
 }
 .popap__close {
-	position: absolute;
-	top: 1%;
-	right: 1%;
-	display: inline-block;
-	padding: 10px 20px;
-	border-radius: 10px;
-	background-color: tomato;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: tomato;
 }
 .popap__submit {
-	position: absolute;
-	left: 50%;
-	bottom: 0;
-	display: inline-block;
-	padding: 10px 20px;
-	border-radius: 10px;
-	background-color: rgb(31, 180, 64);
-	transform: translate(-50%, -5%);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: rgb(31, 180, 64);
+  transform: translate(-50%, -5%);
+}
+
+.popap__input {
+	transform: translate(0%, 200%);
+	border: 1px solid #000;
 }

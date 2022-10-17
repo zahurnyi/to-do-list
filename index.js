@@ -66,38 +66,31 @@ const addItemToList = () => {
 		})
 
 		const editList = () => {
-			// const popapChange = document.createElement('div')
-			// popapChange.classList.add('popap')
-			// item.append(popapChange)
-			const input = document.createElement('input')
-			// popapChange.append(input)
-			// let retake = prompt('change your list');
-			// if (age) {
-			// 	itemContent.textContent = retake;
-			// }
-
 			const popap = document.querySelector('.popap');
 			const popapContent = document.querySelector('.popap__content');
 			const popapClose = document.querySelector('.popap__close');
-			// const buttonDone = document.createElement('button')
-			const buttonDone = document.querySelector('.done');
+			const popapInput = document.querySelector('.popap__input');
+			const popapSubmit = document.querySelector('.popap__submit');
 
 			popap.style.cssText = 'visibility: visible';
-			popapContent.append(input)
+			popapContent.append(popapInput)
 
 			popapClose.addEventListener('click', () => {
 				popap.style.cssText = 'visibility: hidden';
+			});
+
+			popapSubmit.addEventListener('click', () => {
+				itemContent.textContent = popapInput.value
+				popapInput.value = ''
+				popap.style.cssText = 'visibility: hidden';
 			})
 
-			buttonDone.addEventListener('click', (e) => {
-				// alert('testDONEEEE');
-				console.log(e.target);
-				console.log('testDONenee');
-
-				// popapContent.style.cssText = 'text-decoration = text-decoration: line-through'
-			});
 		};
 		buttonEdit.addEventListener('click', editList);
+
+		buttonDone.addEventListener('click', () => {
+			item.style.cssText = 'text-decoration: line-through'
+		});
 	}	
 }
 

@@ -72,13 +72,13 @@ const addItemToList = () => {
 			const popapInput = document.querySelector('.popap__input');
 			const popapSubmit = document.querySelector('.popap__submit');
 
-			popap.style.cssText = 'visibility: visible';
-			// popap.style.cssText = 'display: none';
+			popap.style.visibility = 'visible';
+			// popap.style.cssText = 'display: block';
 			popapContent.append(popapInput)
 
 			popapClose.addEventListener('click', () => {
 				// popap.style.cssText = 'visibility: hidden';
-				popap.style.cssText = 'display: none';
+				popap.style.visibility = 'hidden';
 				popapInput.value = '';
 			});
 
@@ -86,18 +86,19 @@ const addItemToList = () => {
 				if (popapInput.value) {
 					itemContent.textContent = popapInput.value;
 					popapInput.value = '';
-					popap.style.cssText = 'display: block';					
 				}
+				// popap.style.cssText = 'display: none';					
+				popap.style.visibility = 'hidden';					
 			})
-
 		};
 		buttonEdit.addEventListener('click', editList);
 
 		buttonDone.addEventListener('click', () => {
-			item.style.cssText = 'text-decoration: line-through'
+			item.classList.toggle('text-decoration')
 		});
 	}	
 }
+
 
 const clearList = () => {
 	buttonClear.addEventListener('click', () => {
@@ -112,5 +113,3 @@ buttonClear.addEventListener('click', clearList)
 
 
 
-
-// console.log(res);

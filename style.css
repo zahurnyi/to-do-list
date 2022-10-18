@@ -175,19 +175,18 @@ body {
 /* ----------------- */
 
 .popap {
-	display: none;
+	/* display: none; */
+	visibility: hidden;
   background-color: rgba(0, 0, 0, 0.432);
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
-  /* visibility: hidden; */
 }
 .popap__body {
   background-color: #fff;
@@ -203,22 +202,35 @@ body {
   top: 1%;
   right: 1%;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 1em 2em;
   border-radius: 10px;
   background-color: tomato;
+	color: rgb(40, 45, 58);
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 18px;
+
 }
 .popap__submit {
   position: absolute;
   left: 50%;
   bottom: 0;
   display: inline-block;
-  padding: 10px 20px;
+	padding: 1em 2em;
   border-radius: 10px;
-  background-color: rgb(31, 180, 64);
+  background-color: rgb(43, 180, 31);
   transform: translate(-50%, -5%);
+	color: rgb(227, 230, 65);
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 18px;
 }
 
 .popap__input {
 	transform: translate(0%, 200%);
 	border: 1px solid #000;
+}
+
+.text-decoration {
+	text-decoration: line-through;
 }

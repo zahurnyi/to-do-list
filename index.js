@@ -73,16 +73,21 @@ const addItemToList = () => {
 			const popapSubmit = document.querySelector('.popap__submit');
 
 			popap.style.cssText = 'visibility: visible';
+			// popap.style.cssText = 'display: none';
 			popapContent.append(popapInput)
 
 			popapClose.addEventListener('click', () => {
-				popap.style.cssText = 'visibility: hidden';
+				// popap.style.cssText = 'visibility: hidden';
+				popap.style.cssText = 'display: none';
+				popapInput.value = '';
 			});
 
 			popapSubmit.addEventListener('click', () => {
-				itemContent.textContent = popapInput.value
-				popapInput.value = ''
-				popap.style.cssText = 'visibility: hidden';
+				if (popapInput.value) {
+					itemContent.textContent = popapInput.value;
+					popapInput.value = '';
+					popap.style.cssText = 'display: block';					
+				}
 			})
 
 		};

@@ -11,6 +11,8 @@ const buttonClose = document.createElement('button')
 const buttonEdit = document.createElement('button')
 const buttonDone = document.createElement('button')
 
+
+
 buttonClose.classList.add('close')
 
 buttonClear.textContent = 'clear'
@@ -99,13 +101,11 @@ const addItemToList = () => {
 	}	
 }
 
-
 const clearList = () => {
 	buttonClear.addEventListener('click', () => {
 		myList.textContent = ''
 	})
 }
-
 
 
 buttonAdd.addEventListener('click', addItemToList)

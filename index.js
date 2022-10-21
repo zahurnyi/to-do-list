@@ -68,30 +68,33 @@ const addItemToList = () => {
 		})
 
 		const editList = () => {
-			const popap = document.querySelector('.popap');
-			const popapContent = document.querySelector('.popap__content');
-			const popapClose = document.querySelector('.popap__close');
-			const popapInput = document.querySelector('.popap__input');
-			const popapSubmit = document.querySelector('.popap__submit');
+			// const popap = document.querySelector('.popap');
+			// const popapContent = document.querySelector('.popap__content');
+			// const popapClose = document.querySelector('.popap__close');
+			// const popapInput = document.querySelector('.popap__input');
+			// const popapSubmit = document.querySelector('.popap__submit');
 
-			popap.style.visibility = 'visible';
-			// popap.style.cssText = 'display: block';
-			popapContent.append(popapInput)
+			// popap.style.visibility = 'visible';
+			// // popap.style.cssText = 'display: block';
+			// popapContent.append(popapInput)
 
-			popapClose.addEventListener('click', () => {
-				// popap.style.cssText = 'visibility: hidden';
-				popap.style.visibility = 'hidden';
-				popapInput.value = '';
-			});
+			// popapClose.addEventListener('click', () => {
+			// 	// popap.style.cssText = 'visibility: hidden';
+			// 	popap.style.visibility = 'hidden';
+			// 	popapInput.value = '';
+			// });
 
-			popapSubmit.addEventListener('click', () => {
-				if (popapInput.value) {
-					itemContent.textContent = popapInput.value;
-					popapInput.value = '';
-				}
-				// popap.style.cssText = 'display: none';					
-				popap.style.visibility = 'hidden';					
-			})
+			// popapSubmit.addEventListener('click', () => {
+			// 	if (popapInput.value) {
+			// 		itemContent.textContent = popapInput.value;
+			// 		popapInput.value = '';
+			// 	}
+			// 	// popap.style.cssText = 'display: none';					
+			// 	popap.style.visibility = 'hidden';					
+			// })
+			
+			const editItem = prompt('change your item', '')
+			itemContent.textContent = editItem
 		};
 		buttonEdit.addEventListener('click', editList);
 
